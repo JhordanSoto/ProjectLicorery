@@ -1,0 +1,13 @@
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Implementation.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Implementation.pdb
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Interfaces.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Model.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Interfaces.pdb
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Model.pdb
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\obj\Debug\Implementation.csprojResolveAssemblyReference.cache
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\obj\Debug\Implementation.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\obj\Debug\Implementation.pdb
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\MySql.Data.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Google.Protobuf.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Implementation\bin\Debug\Renci.SshNet.dll
