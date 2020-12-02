@@ -1,0 +1,124 @@
+﻿<Window x:Class="ProjectLicoreryIncos.ProviderWin"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectLicoreryIncos"
+        mc:Ignorable="d"
+        Title="ClientWin" Height="900" Width="700"  WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+
+
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="Transparent"  >
+            <Grid>
+                <materialDesign:ColorZone Mode="PrimaryDark" Background="#4a0072">
+                    <StackPanel HorizontalAlignment="Right">
+                        <Button  Width="30" Background="#4a0072" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth3" Padding="0" Click="btn_close">
+                            <materialDesign:PackIcon  Kind="WindowClose"></materialDesign:PackIcon>
+                        </Button>
+                    </StackPanel>
+
+                </materialDesign:ColorZone>
+            </Grid>
+        </Border>
+
+
+        <Grid Grid.Row="1">
+            <Image HorizontalAlignment="Right" x:Name="ImgLogo" Source="C:\Users\Casa\Documents\Visual Studio 2015\Projects\ProjectLicoreryIncos\ProjectLicoreryIncos\Resources\Logo.PNG" Height="100"/>
+            <materialDesign:ColorZone Mode="PrimaryMid" Background="#7b1fa2">
+                <TextBlock Text="Providers" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 50 0 10"/>
+            </materialDesign:ColorZone>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" Margin="20 40 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Home" Foreground="{Binding ElementName=txt_address,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox MaxLength = "20"  x:Name="txt_address" Width="300" materialDesign:HintAssist.Hint="Direccion" materialDesign:HintAssist.IsFloating="True" PreviewTextInput="txt_address_PreviewTextInput" ></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
+                        <materialDesign:PackIcon Kind="Dollar" Foreground="{Binding ElementName=txt_nit,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox MaxLength = "25" x:Name="txt_nit" Width="300" materialDesign:HintAssist.Hint="Nit"   materialDesign:HintAssist.IsFloating="True" PreviewTextInput="txt_nit_PreviewTextInput" ></TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical" Margin="20 40 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Cellphone" Foreground="{Binding ElementName=txt_phone,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox MaxLength = "20"  x:Name="txt_phone" Width="300" materialDesign:HintAssist.Hint="Celular" materialDesign:HintAssist.IsFloating="True" TextChanged="txt_phone_TextChanged" PreviewTextInput="txt_phone_PreviewTextInput" ></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
+                        <materialDesign:PackIcon Kind="PersonAdd" Foreground="{Binding ElementName=txt_name,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox MaxLength = "15" x:Name="txt_Bussinessname" Width="300" materialDesign:HintAssist.Hint="Razon Social" materialDesign:HintAssist.IsFloating="True" PreviewTextInput="txt_Bussinessname_PreviewTextInput" ></TextBox>
+                    </StackPanel>
+
+                 
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" Margin="20 20 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="btnDelete"  HorizontalAlignment="Right" Margin="0 20 70 0" Style="{DynamicResource MaterialDesignFloatingActionAccentButton}" Height="50" Content="Eliminar" Width="50" Click="Button_Click_1"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical" Margin="20 20 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button  HorizontalAlignment="Right" Margin="0 20 70 0" Style="{DynamicResource MaterialDesignFloatingActionLightButton}" Height="50" Content="Actualizar" Width="50" Click="Button_Click"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2">
+                <StackPanel Orientation="Vertical" Margin="20 20 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button  HorizontalAlignment="Right" Margin="0 20 70 0" Style="{DynamicResource MaterialDesignFloatingActionDarkButton}" Height="50" Content="Registrar" Width="50" Click="Button_Click1"></Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="4">
+            <StackPanel Orientation="Vertical" Margin="10 10 0 0">
+                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <materialDesign:PackIcon Kind="Search" Foreground="{Binding ElementName=txt_search,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                    <TextBox MaxLength = "15" Height="50" x:Name="txt_search" Width="300" materialDesign:HintAssist.Hint="Buscar" materialDesign:HintAssist.IsFloating="True" TextChanged="txt_search_TextChanged" ></TextBox>
+                </StackPanel>
+                <DataGrid x:Name="dgvDatos" Margin="45,5,24,5" Height="190" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

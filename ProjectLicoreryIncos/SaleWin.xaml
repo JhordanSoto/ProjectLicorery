@@ -1,0 +1,143 @@
+﻿<Window x:Class="ProjectLicoreryIncos.SaleWin"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="Roboto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectLicoreryIncos"
+        mc:Ignorable="d"
+        Title="ClientWin" Height="1020" Width="1400"  WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="Transparent">
+            <Grid>
+                <materialDesign:ColorZone Mode="PrimaryDark" Background="#4a0072">
+                    <StackPanel HorizontalAlignment="Right">
+                        <Button  Width="30" Background="#4a0072" Height="30" materialDesign:ShadowAssist.ShadowDepth="Depth3" Padding="0" Click="btn_close">
+                            <materialDesign:PackIcon  Kind="WindowClose"></materialDesign:PackIcon>
+                        </Button>
+                    </StackPanel>
+
+                </materialDesign:ColorZone>
+            </Grid>
+        </Border>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="487*"/>
+                <ColumnDefinition Width="206*"/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:ColorZone Mode="PrimaryMid" Background="#7b1fa2" Grid.ColumnSpan="2">
+                <TextBlock Text="Ventas" FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30 50 0 10"/>
+            </materialDesign:ColorZone>
+            <Image HorizontalAlignment="Right" x:Name="ImgLogo" Source="C:\Users\Casa\Documents\Visual Studio 2015\Projects\ProjectLicoreryIncos\ProjectLicoreryIncos\Resources\Logo.PNG" Height="auto" Grid.Column="1"/>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                <StackPanel Orientation="Vertical" Margin="20 40 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Person" Foreground="{Binding ElementName=txt_address,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                            <ComboBox KeyUp="cbx_client_TextChanged"  x:Name="cbx_client" Width="300" materialDesign:HintAssist.Hint="CI del Cliente" materialDesign:HintAssist.IsFloating="True" IsEditable="True" PreviewTextInput="cbx_client_PreviewTextInput" SelectionChanged="cbx_client_SelectionChanged_1" DropDownClosed="cbx_client_DropDownClosed"  />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
+                        <materialDesign:PackIcon Kind="Dollar" Foreground="{Binding ElementName=txt_Credit,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox  MaxLength = "2" x:Name="txt_UnitPrice" IsReadOnly="True" Width="300" materialDesign:HintAssist.Hint="Precio Unitario"   materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 40 0 0">
+                        <materialDesign:PackIcon Kind="Numbers" Foreground="{Binding ElementName=txt_lastName,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox MaxLength = "25" x:Name="txt_Quantity" Width="300" materialDesign:HintAssist.Hint="Cantidad"   materialDesign:HintAssist.IsFloating="True"></TextBox>
+                    </StackPanel>
+
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <StackPanel Visibility="Hidden" x:Name="stackClientData" Orientation="Vertical" Margin="20 40 0 0">
+                        <StackPanel  Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Person" Foreground="{Binding ElementName=txt_address,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                            <TextBox  MaxLength = "2" x:Name="txt_nameClient" IsReadOnly="True" Width="300" materialDesign:HintAssist.Hint="Nombre Cliente"   materialDesign:HintAssist.IsFloating="True"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel  Orientation="Horizontal" Margin="0 40 0 0">
+                            <materialDesign:PackIcon Kind="Home" Foreground="{Binding ElementName=txt_Credit,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                            <TextBox  MaxLength = "2"  x:Name="txt_ZoneClient" IsReadOnly="True" Width="300" materialDesign:HintAssist.Hint="Zona"   materialDesign:HintAssist.IsFloating="True"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"  Margin="0 40 0 0">
+                            <materialDesign:PackIcon Kind="AddressMarker" Foreground="{Binding ElementName=txt_lastName,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                            <TextBox MaxLength = "25" x:Name="txt_Address" Width="300" materialDesign:HintAssist.Hint="Direccion"   materialDesign:HintAssist.IsFloating="True"></TextBox>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Grid>
+                <StackPanel Orientation="Vertical" Margin="20 300 0 0">
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 0" Height="72">
+                        <Button   HorizontalAlignment="Right" Margin="0 0 15 0" Style="{DynamicResource MaterialDesignFloatingActionDarkButton}" Height="50" Content="Cargar" Width="50" Click="Button_Click" ></Button>
+                        <Button Visibility="Visible" x:Name="btnelimanteproduct" HorizontalAlignment="Right" Margin="0 0 15 0" Style="{DynamicResource MaterialDesignFloatingActionLightButton}" Height="50" Content="Sacar" Width="50" Click="btnelimanteproduct_Click" />
+                        <Button x:Name="btncancelProducts" HorizontalAlignment="Right" Margin="0 0 15 0" Style="{DynamicResource MaterialDesignFloatingActionAccentButton}" Height="50" Content="Cancelar" Width="50" Click="btncancel_Click"/>
+                        <StackPanel Orientation="Horizontal" Margin="0 20 0 0" Height="72">
+                            <materialDesign:PackIcon Kind="Dollar" Foreground="{Binding ElementName=txt_Credit,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                            <TextBox IsEnabled="False" MaxLength = "25" Height="50" IsReadOnly="False" x:Name="txt_Ingreso" Width="300" materialDesign:HintAssist.Hint="Ingreso"   materialDesign:HintAssist.IsFloating="True" TextChanged="txt_Ingreso_TextChanged"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Vertical" Margin="10 10 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                        <materialDesign:PackIcon Kind="Search" Foreground="{Binding ElementName=txt_search,Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4"/>
+                        <TextBox MaxLength = "15" Height="50" x:Name="txt_searchh" Width="300" materialDesign:HintAssist.Hint="Nombre del Producto" materialDesign:HintAssist.IsFloating="True" TextChanged="txt_searchh_TextChanged" ></TextBox>
+                    </StackPanel>
+                    <DataGrid Background="#ae52d4" x:Name="dgvDatos" Margin="45,5,24,5" Height="190" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatos_SelectionChanged"  />
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="73*"/>
+                <ColumnDefinition Width="34*"/>
+                <ColumnDefinition Width="1285*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Margin="11,53,-1,-43" Grid.ColumnSpan="3">
+                <DataGrid x:Name="dgvDatosSaled" Margin="45,5,24,5" Height="190" IsReadOnly="True" CanUserAddRows="False" SelectionChanged="dgvDatosSaled_SelectionChanged"  />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4">
+            <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
+                <Button x:Name="button" Content="Vender" HorizontalAlignment="Left" Margin="174,9,0,0" VerticalAlignment="Top" Width="100" Click="button_Click_1"/>
+                <TextBox MaxLength = "25" IsReadOnly="True" Height="50" x:Name="txt_Total" Width="300" materialDesign:HintAssist.Hint="Total"   materialDesign:HintAssist.IsFloating="True"/>
+                <TextBox MaxLength = "25" IsReadOnly="True" Height="50" x:Name="txt_cambio" Width="300" materialDesign:HintAssist.Hint="Cambio a devolver"   materialDesign:HintAssist.IsFloating="True"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>
+
