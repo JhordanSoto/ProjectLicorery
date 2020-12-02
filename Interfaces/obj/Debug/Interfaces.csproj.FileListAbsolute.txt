@@ -1,0 +1,7 @@
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\bin\Debug\Model.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\bin\Debug\Model.pdb
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Casa\documents\visual studio 2015\Projects\ProjectLicoreryIncos\Interfaces\obj\Debug\Interfaces.pdb
