@@ -97,8 +97,8 @@ namespace ProjectLicoreryIncos
 
         private void ListViewItem_Selected_8(object sender, RoutedEventArgs e)
         {
-            mm.Show();
-            this.Close();
+            Reports.ReportsWin reports = new Reports.ReportsWin();
+            reports.Show();
         }
 
         private void ListViewItem_Selected_9(object sender, RoutedEventArgs e)

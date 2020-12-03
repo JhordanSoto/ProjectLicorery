@@ -49,7 +49,7 @@ namespace Implementation
         public DataTable Select()
         {
             DataTable dt = new DataTable();
-            string query = @"SELECT c.IdCategory as Nro, c.NameCategory, if(c.status=1,'activo','inactivo')as 'estado', u.Username as 'register by'
+            string query = @"SELECT c.IdCategory as Nro, c.NameCategory ' Nombre Categoria', if(c.status=1,'activo','inactivo')as 'estado', u.Username as 'register by'
                              FROM category c inner join User u on c.IdUser=u.IdUser;";
             MySqlCommand cmd;
             try

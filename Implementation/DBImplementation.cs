@@ -10,7 +10,7 @@ namespace Implementation
 {
     class DBImplementation
     {
-       static string connectionString = "server=localhost;database=bddlicoreria;Uid=root;pwd=1234;Port=3306";
+       static string connectionString = "server=localhost;database=bddlicoreria2;Uid=root;pwd=1234;Port=3306";
         public static MySqlCommand CreateBasicCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

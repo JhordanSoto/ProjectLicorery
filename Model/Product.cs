@@ -10,13 +10,15 @@ namespace Model
     {
         public int idProduct { get; set; }
         public string detail { get; set; }
+        public string image { get; set; }
         public byte quantity { get; set;}
         public  double priceSale { get; set; }
         public  double priceBuy { get; set; }
         public DateTime registrationDate { get; set; }
         public DateTime updateDate { get; set; }
         public int idCategory { get; set; }
-        public int idUser { get; set; }
+        public int idProvider { get; set; }
+        public byte idUser { get; set; }
         public byte status { get; set; }
         public string nameCategory { get; set; }
         public Product(int idProduct, string detail, byte quantity, double priceSale, double priceBuy, DateTime registrationDate, DateTime updateDate, int idCategory,byte status)
@@ -40,6 +42,18 @@ namespace Model
             this.priceBuy = priceBuy;
             this.nameCategory = nameCategory;
             this.idUser = idUser;
+        }
+
+        public Product(string detail, byte quantity, double priceSale, double priceBuy, string image, int idCategory, byte idUser, int idProvider)
+        {
+            this.idProvider = idProvider;
+            this.detail = detail;
+            this.quantity = quantity;
+            this.priceSale = priceSale;
+            this.priceBuy = priceBuy;
+            this.image = image;
+            this.idUser = idUser;
+            this.idCategory = idCategory;
         }
 
     }

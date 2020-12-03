@@ -77,6 +77,12 @@
     <Compile Include="ProviderWin.xaml.cs">
       <DependentUpon>ProviderWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReportsWin.xaml.cs">
+      <DependentUpon>ReportsWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Invoice.xaml.cs">
+      <DependentUpon>Invoice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SaleWin.xaml.cs">
       <DependentUpon>SaleWin.xaml</DependentUpon>
     </Compile>
@@ -112,6 +118,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProviderWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\ReportsWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sales\Invoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,6 +173,10 @@
     <ProjectReference Include="..\Implementation\Implementation.csproj">
       <Project>{1e0a36fc-6c15-4334-b42e-c078d5e310a9}</Project>
       <Name>Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{F0135D99-FC87-4975-8E63-F08A6552C3B0}</Project>
+      <Name>Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{3854bad2-69e0-4d7a-bfc5-105e657cdd83}</Project>

@@ -202,7 +202,7 @@ namespace ProjectLicoreryIncos.Products
             {
                 if (txt_search.Text.Length >= 3)
                 {
-                    BuscarCliente();
+                    BuscarCategoria();
                 }
                 else
                 {
@@ -210,7 +210,7 @@ namespace ProjectLicoreryIncos.Products
                 }
             }
         }
-        void BuscarCliente()
+        void BuscarCategoria()
         {
             try
             {

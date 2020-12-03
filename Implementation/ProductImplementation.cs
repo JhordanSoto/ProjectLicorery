@@ -32,26 +32,26 @@ namespace Implementation
 
         public int Insert(Product generic)
         {
-            query = @"insert into User (UserName,Password,TypeUser,Phone,Address,Name,LastName) 
-                      values(@Username, @Password, @TypeUser, @Phone, @Address, @Name, @LastName)";
-            //try
-             //{
+            query = @"Insert into product (Detail,quantity,PriceBuy,PriceSale,idCategoria,idUser,picture,idProvider)
+                      values (@detail,@quantity,@PriceBuy,@PriceSale,@idCategoria,@idUser,@picture,@idProvider)";
+            try
+             {
                  MySqlCommand cmd = DBImplementation.CreateBasicCommand(query);
-               /*  cmd.Parameters.AddWithValue("@Username", generic.userName);
-                 cmd.Parameters.AddWithValue("@Password", generic.password);
-                 cmd.Parameters.AddWithValue("@TypeUser", generic.typeUser);
-                 cmd.Parameters.AddWithValue("@Phone", generic.phone);
-                 cmd.Parameters.AddWithValue("@Address", generic.address);
-                 cmd.Parameters.AddWithValue("@Name", generic.name);
-                 cmd.Parameters.AddWithValue("@LastName", generic.lastName);
+                 cmd.Parameters.AddWithValue("@detail", generic.detail);
+                 cmd.Parameters.AddWithValue("@quantity", generic.quantity);
+                 cmd.Parameters.AddWithValue("@PriceBuy", generic.priceBuy);
+                 cmd.Parameters.AddWithValue("@PriceSale", generic.priceSale);
+                 cmd.Parameters.AddWithValue("@idCategoria", generic.idCategory);
+                 cmd.Parameters.AddWithValue("@idUser", generic.idUser);
+                 cmd.Parameters.AddWithValue("@picture", generic.image);
+                 cmd.Parameters.AddWithValue("@idProvider", generic.idProvider);
                  return DBImplementation.ExecuteBasicCommand(cmd);
              }
              catch (Exception ex)
              {
 
                  throw ex;
-             }*/
-            return DBImplementation.ExecuteBasicCommand(cmd);
+             }
         }
 
         public DataTable Select()
@@ -114,8 +114,8 @@ namespace Implementation
         public DataTable Selectv()
         {
             DataTable dt = new DataTable();
-            string query = @"SELECT p.idProduct 'Nro', p.detail,p.Quantity,p.PriceBuy,p.PriceSale,c.nameCategory, RegistrationDate 
-                             FROM bddlicoreria.product p inner join category c on p.idCategoria=c.IdCategory;";
+            string query = @"SELECT p.idProduct 'Nro', p.detail 'Detalles',p.Quantity 'Cantidad' ,p.PriceBuy 'Precio Compra',p.PriceSale 'Precio venta',c.nameCategory 'Categoria' 
+                             FROM product p inner join category c on p.idCategoria=c.IdCategory;";
             MySqlCommand cmd;
             try
             {

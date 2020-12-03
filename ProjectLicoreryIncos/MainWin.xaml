@@ -69,7 +69,7 @@
             </Grid.RenderTransform>
             <StackPanel Background="#7b1fa2">
                 <Image Height="300" Source="C:\Users\Casa\Documents\Visual Studio 2015\Projects\ProjectLicoreryIncos\ProjectLicoreryIncos\Resources\Logo.png"/>
-                <ListView Foreground="White" FontFamily="Champagne &amp; Limousines" FontSize="20">
+                <ListView x:Name="listviewoptions" Foreground="White" FontFamily="Champagne &amp; Limousines" FontSize="20">
                     <ListViewItem Padding="0" Height="75" Selected="ListViewItem_Selected_1">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Width="50" Height="80" Kind="Add" Foreground="Black" VerticalAlignment="Center" Margin="20"/>
@@ -106,7 +106,7 @@
                             <TextBlock Text="Categorias" Margin="20"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem  Padding="0" Height="75" Selected="ListViewItem_Selected_8">
+                    <ListViewItem  Padding="0" Height="75" Selected="ListViewItem_Selected_8" FontFamily="Roboto">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Width="50" Height="80" Kind="DriveDocument" Foreground="Black" VerticalAlignment="Center" Margin="20"/>
                             <TextBlock Text="Reportes" Margin="20"></TextBlock>

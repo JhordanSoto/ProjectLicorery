@@ -50,6 +50,7 @@
     <Compile Include="ProductImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderImplement.cs" />
+    <Compile Include="ReportImplement.cs" />
     <Compile Include="SaleImplement.cs" />
     <Compile Include="UserImplement.cs" />
   </ItemGroup>
